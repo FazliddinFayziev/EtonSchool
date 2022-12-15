@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="with=device-width , initial-scale=1.0">
+		<title>ETON SCHOOL</title>
+		<link rel="icon" href="https://res.cloudinary.com/sky-line/image/upload/v1667964996/logo-removebg-preview_pffmxb.png">
+    <link rel="stylesheet" href="CSS/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="CSS/font-awesome.min.css">
+	</head>
+	<style>
+		/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 500px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Reviews
+===============
+*/
+main {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+}
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.underline {
+  height: 0.25rem;
+  width: 5rem;
+  background: var(--clr-primary-5);
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  width: 80vw;
+  max-width: var(--fixed-width);
+}
+.review {
+  background: var(--clr-white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+.review:hover {
+  box-shadow: var(--dark-shadow);
+}
+.img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+#person-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  height: 100%;
+  position: relative;
+}
+@media screen and (max-width: 1440px) {
+  .img-container {
+	width: 270px;
+	height: 270px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .img-container {
+	width: 250px;
+	height: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img-container {
+	width: 250px;
+	height: 250px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .img-container {
+	width: 210px;
+	height: 210px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .img-container {
+	width: 200px;
+	height: 200px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .img-container {
+	width: 180px;
+	height: 180px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .img-container {
+	width: 160px;
+	height: 160px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .img-container {
+	width: 150px;
+	height: 150px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .img-container {
+	width: 140px;
+	height: 140px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .img-container {
+	width: 130px;
+	height: 130px;
+  }
+}
+
+#author {
+  margin-bottom: 0.25rem;
+}
+#job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: var(--clr-primary-5);
+  font-size: 0.85rem;
+}
+#info {
+  margin-bottom: 0.75rem;
+}
+.prev-btn,
+.next-btn {
+  color: var(--clr-primary-7);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--clr-primary-5);
+}
+
+
+
+/* gallery */
+.section-gallery {
+  margin-top: 100px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px 200px;
+  gap: 1rem;
+}
+
+.gallery li:nth-child(2) {
+  grid-row: span 2;
+}
+
+.gallery li:nth-child(4) {
+  grid-row: span 3;
+}
+
+
+
+.gallery ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.gallery li {
+  min-width: 0;
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow:
+    0.3px 0.5px 0.7px hsl(23deg 93% 31% / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(23deg 93% 31% / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(23deg 93% 31% / 0.36),
+    5px 10px 12.6px -2.5px hsl(23deg 93% 31% / 0.36);    
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+	</style>
+	<body>
+  <section class="sub-header"> <!-- header -->
+  <nav>
+		<a href="index.html"><img src="https://res.cloudinary.com/sky-line/image/upload/v1668131098/e-removebg-preview_uka5rp.png" alt="logo"></a>
+		<div class="nav-links" id="navLinks">
+			<i class="fa fa-times" onclick="hideMenu()"></i>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="course.html">COURSE</a></li>
+				<li><a href="blog.html">BLOG</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+		<i class="fa fa-bars" onclick="showMenu()" class="showMenu"></i>
+	</nav>
+	<h1 style="font-size: 30px; margin-top: 50px;">About Us</h1>
+	</section><!-- /header -->
+  <!-- fixed-icons -->
+  <div id="fixed-social">
+    <div>
+      <a href="https://t.me/EtonLanguageCenter" class="fixed-telegram" target="_blank"><i class="fa fa-telegram"></i>
+        <span>Telegram</span></a>
+    </div>
+    <div>
+      <a href="https://www.instagram.com/eton.uz/" class="fixed-instagrem" target="_blank"><i class="fa fa-instagram"></i>
+        <span>Instagram</span></a>
+    </div>
+    <div>
+      <a href="https://www.facebook.com/profile.php?id=100083689317842" class="fixed-facebook" target="_blank"><i
+          class="fa fa-facebook"></i> <span>Facebook</span></a>
+    </div>
+    <div>
+      <a href="https://www.tiktok.com/@eton.languagecenter?_r=1&_d=e0m9mfegeildef&language=ru&sec_uid=MS4wLjABAAAAnp_Tuxwxn1Ude5feYMa5uqe9eNxCZr-e6MOnAfGtnSp5Rsk4NSiJ8hsDqxyX6w7j&share_author_id=7136053949728146433&source=h5_m&u_code=d81gh124g793ll&timestamp=1668703164&user_id=6729436039980647429&sec_user_id=MS4wLjABAAAAKL9-pEeYQqUAyJ4f0cummhY5MW1KTun2A72Cf8BxNpzefQBNt_YsiT_r9iQoYVU9&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7165321823751096065&share_link_id=4e35322e-9c8f-4282-a084-d38f5a806474&share_app_id=1233&ugbiz_name=Account&ug_btm=b5836"
+        class="fixed-tiktok" target="_blank"><i class="fa fa-tiktok"></i>
+        <span>Tik-Tok</span></a>
+    </div>
+  </div>
+  <!-- end fixed icons -->
+	<a href="tel:+998996414444">
+		<div class="phone-call"><img
+				src="https://res.cloudinary.com/sky-line/image/upload/v1668165276/phone-call_zd9x6b.png" width="30"
+				alt="Call Now" title="Call Now" style="margin-top: 20px;"></div>
+	</a>
+
+  <!-- ----about us section -->
+	<section class="about-us">
+		<div class="row">
+			<div class="about-col">
+				<h1 style="font-size: 20px;">Small London of Uzbekistan</h1>
+				<p style="color: black;">Eton is one of the most powerful education center which
+					is ready to build your future with you and help you to learn by using modern technologies and 
+					(IELTS) certified tutors. <br>
+					 Eton is popular with its wonderful experts, modern teaching and accessible location.
+				</p>
+			</div>
+			<div class="about-col">
+				<img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" >
+			</div>
+		</div>
+	</section>
+
+	<!-- video -->
+	<main>
+		<section class="container">
+			<!-- title -->
+			<div class="title">
+				<h2>Our atmosphire</h2>
+				<div class="underline"></div>
+			</div>
+			<!-- review -->
+			<article class="review">
+				<div class="img-container">
+					<video controls id="video">
+            <source src="https://res.cloudinary.com/sky-line/video/upload/v1667963527/eton_video_rf69hs.mp4" type="video/mp4" id="person-img"/>
+					</video>
+				</div>
+				<h4 id="author">Eton school</h4>
+				<!-- prive next buttons-->
+				<div class="buttons-container">
+					<button class="prev-btn">
+						<i class="fas fa-chevron-circle-left"></i>
+					</button>
+					<button class="next-btn">
+						<i class="fas fa-chevron-circle-right"></i>
+					</button>
+				</div>
+			</article>
+		</section>
+	</main>
+	<!-- Video end -->
+
+
+
+  <!-- gallery -->
+  <section class="section-gallery">
+    <!-- title -->
+    <div class="title">
+      <h2>Gallery</h2>
+      <div class="underline"></div>
+    </div>
+    <ul class="gallery">
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+      <li>
+        <img src="https://res.cloudinary.com/sky-line/image/upload/v1668070563/img8_qeiuca.png" alt="">
+      </li>
+    </ul>
+  </section>
+  
+  <!-- gallery end -->
+  
+	
+  
+	
+
+
+
+
+
+<!--------Footer---------->
+<section class="footer">
+	<h4>Follow US</h4>
+	<div>
+		<a href="https://t.me/sky_line_team" style="text-decoration: none;">
+			<img style="width: 50px; height: 50px;"
+				src="https://res.cloudinary.com/sky-line/image/upload/v1668163962/Untitled-removebg-preview_tnsftn.png"
+				alt="">
+		</a>
+		<img style="width: 70px; height: 50px;"
+			src="https://res.cloudinary.com/sky-line/image/upload/v1668163994/et-pic-removebg-preview_ctps8p.png" alt="">
+	</div>
+	<p class="about-des" style="color: black;">copyright &copy; Eton school <span id="date">
+			<!-- 2022 -->
+		</span>
+		.all rights reserved</p>
+	<div class="icons">
+		<a href="https://t.me/EtonLanguageCenter"><i class="fa fa-telegram"></i></a>
+		<a href="https://www.instagram.com/eton.uz/"><i class="fa fa-instagram"></i></a>
+		<a href="contact.html"><i class="fa fa-location-dot"></i></a>
+	</div>
+</section>
+
+
+
+
+
+<script>
+  // local reviews data
+    const reviews = [
+      {
+        id: 1,
+        title: "Eton School",
+        video:
+          "https://res.cloudinary.com/sky-line/video/upload/v1667963527/eton_video_rf69hs.mp4",
+      },
+      {
+        id: 2,
+        title: "Why Eton school?",
+        video:
+          "https://res.cloudinary.com/sky-line/video/upload/v1668242216/video2_nfnr3y.mp4",
+      },
+    ];
+
+    // select items 
+    const video = document.getElementById("video")
+    const title = document.getElementById("author")
+
+    const prevBtn = document.querySelector(".prev-btn")
+    const nextBtn = document.querySelector(".next-btn")
+
+    // set starting item 
+    let currentItem = 0;
+
+    // load initial item 
+    window.addEventListener("DOMContentLoaded", function () {
+      showPerson()
+    });
+
+    // show person based on item 
+
+    function showPerson() {
+      const item = reviews[currentItem];
+      video.src = item.video
+      title.textContent = item.title
+    }
+
+    // show next video
+
+    nextBtn.addEventListener("click", function () {
+      currentItem++;
+      if (currentItem > reviews.length - 1) {
+        currentItem = 0;
+      }
+      showPerson()
+    });
+
+    // show prev video
+
+    prevBtn.addEventListener("click", function () {
+      currentItem--;
+      if (currentItem < 0) {
+        currentItem = reviews.length - 1;
+      }
+      showPerson()
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-------------------- Javascript for Toggle Menue---------------------->
+	<script>
+		var navLinks= document.getElementById("navLinks");
+		function showMenu(){
+			navLinks.style.right = "0";
+			
+		}
+		function hideMenu(){
+			navLinks.style.right = "-200px";
+			
+		}
+	</script>
+	<script>
+		// ********** set date ************
+		const date = document.getElementById("date")
+		date.innerHTML = new Date().getFullYear();
+	</script>
+	</body>
+</html>
